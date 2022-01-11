@@ -11,5 +11,5 @@ func NewSuccessResponse(data, paging, filter interface{}) *responder {
 }
 
 func SimpleSuccessResponse(data interface{}) *responder {
-	return &responder{Data: data, Paging: nil, Filter: nil}
+	return NewSuccessResponse(data, nil, nil)
 }
