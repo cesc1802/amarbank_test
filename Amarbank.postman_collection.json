@@ -1,0 +1,84 @@
+{
+	"info": {
+		"_postman_id": "5d775054-0446-445f-a003-a4424c783c12",
+		"name": "Amarbank",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create User",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": null
+			},
+			"response": []
+		},
+		{
+			"name": "Get User By ID",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "localhost:8088/users/590d5d9b-ea81-4ffd-91f4-15b7a4c2f321",
+					"host": [
+						"localhost"
+					],
+					"port": "8088",
+					"path": [
+						"users",
+						"590d5d9b-ea81-4ffd-91f4-15b7a4c2f321"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Account",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "localhost:8088/v1/accounts",
+					"host": [
+						"localhost"
+					],
+					"port": "8088",
+					"path": [
+						"v1",
+						"accounts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Transfer",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"sender_id\": \"8f0a687d-6eb6-415a-bd93-618c241a3004\",\n    \"receiver_id\": \"f0869d5e-0450-468a-9323-c3421b2a9b3f\",\n    \"loan_amount\": 9999,\n    \"loan_period_in_months\": \"2\",\n    \"loan_purpose\": \"vacation\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8088/v1/transfers",
+					"host": [
+						"localhost"
+					],
+					"port": "8088",
+					"path": [
+						"v1",
+						"transfers"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
